@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Open Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <video controls="true" autoplay="true"></video>
+      
+    <script>
+
+        async function playVideo(fileHandle) {
+          const video = document.querySelector("video");
+          const fileData = await fileHandle.getFile();
+          video.src = URL.createObjectURL(fileData);
+          video.controls = true;
+          video.play();
+        }
+      if ("launchQueue" in window) {
+        window.launchQueue.setConsumer((launchParams) => {
+          if (launchParams.files && launchParams.files.length) {
+            playVideo(launchParams.files[0]);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

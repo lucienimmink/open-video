@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "vite build . && npm run analyse",
+    "preview": "vite preview .",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "vite": "^4.2.1"
+  },
+  "name": "@lucienimmink/open-video",
+  "version": "0.0.1",
+  "description": "Open videos in a browser",
+  "author": "Lucien Immink",
+  "license": "MIT",
+  "volta": {
+    "node": "20.0.0",
+    "npm": "9.6.4"
+  }
+}
