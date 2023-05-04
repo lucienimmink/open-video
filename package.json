@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "vite build . && npm run analyse",
-    "preview": "vite preview .",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "vite"
   },
   "devDependencies": {
