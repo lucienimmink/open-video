@@ -71,6 +71,7 @@
         video.play();
 
         video.onloadedmetadata = () => {
+          document.title = `${fileHandle.name}`;
           window.resizeTo(getPreferredWidth(video), getPreferredHeight(video));
         };
 
