@@ -8,45 +8,11 @@
     />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>Open Video</title>
-    <style>
-      html {
-        height: 100%;
-        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background: #000;
-        overflow: hidden;
-        height: 100%;
-      }
-      video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .hidden {
-        display: none;
-      }
-      .error-banner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #f00;
-        color: #fff;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-      }
-    </style>
   </head>
   <body>
     <video controls="true" autoplay="true"></video>
-    <div class="error-banner hidden">
-      <div class="error-message"></div>
+    <div class="error-banner">
+      <div class="error-message">Open by selecting a video file</div>
     </div>
     <script type="module" src="./src/index.js"></script>
   </body>
