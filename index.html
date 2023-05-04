@@ -9,30 +9,44 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>Open Video</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #000;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
     <video controls="true" autoplay="true"></video>
-      
-    <script>
 
-        async function playVideo(fileHandle) {
-          const video = document.querySelector("video");
-          const fileData = await fileHandle.getFile();
-          video.src = URL.createObjectURL(fileData);
-          video.controls = true;
-          video.play();
-        }
+    <script>
+      const getPreferredHeight = (video) => {
+        const chromeHeight = window.outerHeight - window.innerHeight;
+        return window.height < video.videoHeight
+          ? window.height
+          : video.videoHeight + chromeHeight;
+      };
+      const getPreferredWidth = (video) => {
+        return window.width < video.videoWidth
+          ? window.width
+          : video.videoWidth;
+      };
+      async function playVideo(fileHandle) {
+        const video = document.querySelector("video");
+        const fileData = await fileHandle.getFile();
+        video.src = URL.createObjectURL(fileData);
+        video.controls = true;
+        video.play();
+
+        video.onloadedmetadata = () => {
+          window.resizeTo(getPreferredWidth(video), getPreferredHeight(video));
+        };
+      }
       if ("launchQueue" in window) {
         window.launchQueue.setConsumer((launchParams) => {
           if (launchParams.files && launchParams.files.length) {
