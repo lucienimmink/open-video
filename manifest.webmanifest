@@ -4,8 +4,6 @@
     "orientation": "natural",
     "start_url": "/",
     "short_name": "Open Video",
-    "theme_color": "#ffffff",
-    "background_color": "#000000",
     "description": "Open Video using the browser.",
     "display_override": [
         "window-controls-overlay"
