@@ -1,8 +1,5 @@
 import './index.css';
 
-import './assets/logo-192x192.png';
-import './assets/logo-512x512.png';
-
 const getPreferredHeight = (video) => {
   const chromeHeight = window.outerHeight - window.innerHeight;
   return window.height < video.videoHeight
