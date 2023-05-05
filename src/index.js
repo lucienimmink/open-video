@@ -11,7 +11,6 @@ const getPreferredWidth = (video) => {
 };
 
 async function playVideo(fileHandle) {
-  console.log('handle');
   const errorBanner = document.querySelector(".error-banner");
   errorBanner.classList.add("hidden");
   const video = document.querySelector("video");
@@ -40,3 +39,13 @@ if ("launchQueue" in window) {
     }
   });
 }
+
+const dropElement = document.querySelector("video");
+dropElement.addEventListener("dragover", (event) => { event.preventDefault(); dropElement.classList.add('dropping') } );
+dropElement.addEventListener("dragleave", (event) => { event.preventDefault(); dropElement.classList.remove('dropping') } );
+dropElement.addEventListener("drop", async (event) => { 
+  event.preventDefault();
+  dropElement.classList.remove('dropping')
+  const fileHandle = await event.dataTransfer.items[0].getAsFileSystemHandle();
+  playVideo(fileHandle);
+} );

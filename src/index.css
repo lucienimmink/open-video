@@ -14,6 +14,11 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+
+  &.dropping {
+    opacity: 0.25;
+  }
 }
 .hidden {
   display: none;
