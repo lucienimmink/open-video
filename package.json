@@ -5,7 +5,7 @@
     "start": "vite"
   },
   "devDependencies": {
-    "vite": "^4.2.1",
+    "vite": "^4.3.4",
     "vite-plugin-pwa": "^0.14.7"
   },
   "name": "@lucienimmink/open-video",
@@ -14,7 +14,7 @@
   "author": "Lucien Immink",
   "license": "MIT",
   "volta": {
-    "node": "20.0.0",
+    "node": "20.1.0",
     "npm": "9.6.6"
   }
 }
