@@ -30,8 +30,14 @@ video {
   right: 0;
   background: #f00;
   color: #fff;
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  padding: 0 0.2rem;
+  font-size: min(2.35vw, 1.3rem);
   font-weight: bold;
+  height: 33px;
+  line-height: 33px;
   text-align: center;
+  max-width: calc(env(titlebar-area-width, 100%));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
