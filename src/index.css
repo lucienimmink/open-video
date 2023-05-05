@@ -15,10 +15,11 @@ video {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.2s ease-in-out;
-
-  &.dropping {
-    opacity: 0.25;
-  }
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+video.dropping {
+  opacity: 0.25;
 }
 .hidden {
   display: none;
@@ -40,4 +41,6 @@ video {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  -webkit-app-region: drag;
+  app-region: drag;
 }
