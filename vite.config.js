@@ -10,7 +10,6 @@ export default {
         orientation: "natural",
         short_name: "Open Video",
         description: "Open Video using the browser.",
-        display_override: ["window-controls-overlay"],
         theme_color: "#ffffff",
         launch_handler: {
           client_mode: "focus-existing",
