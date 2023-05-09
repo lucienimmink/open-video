@@ -30,6 +30,19 @@ export default {
             },
           },
         ],
+        shortcuts: [
+          {
+            name: "Open file",
+            url: "/?open=true",
+            description: "Browse for a new file to play",
+            icons: [
+              {
+                src: "logo-192x192.png",
+                sizes: "192x192",
+              }
+            ]
+          },
+        ],
         icons: [
           {
             src: "logo-192x192.png",

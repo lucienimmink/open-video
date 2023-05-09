@@ -37,6 +37,14 @@ if ("launchQueue" in window) {
     if (launchParams.files && launchParams.files.length) {
       playVideo(launchParams.files[0]);
     }
+    if (launchParams.targetURL) {
+      const query = new URL(launchParams.targetURL).searchParams;
+      const open = query.get('open');
+      if (open) {
+        const fileSelectElement = document.querySelector("input[type=file]");
+        fileSelectElement.click();
+      } 
+    }
   });
 }
 
