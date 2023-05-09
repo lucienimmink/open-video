@@ -9,7 +9,7 @@
     "vite-plugin-pwa": "^0.14.7"
   },
   "name": "@lucienimmink/open-video",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Open videos in a browser",
   "author": "Lucien Immink",
   "license": "MIT",
