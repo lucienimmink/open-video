@@ -2,9 +2,11 @@
   "scripts": {
     "build": "vite build",
     "preview": "vite preview",
+    "format": "prettier \"**/*.js\" \"**/*.css\" \"**/*.html\" --write --ignore-path .gitignore",
     "start": "vite"
   },
   "devDependencies": {
+    "prettier": "^2.8.8",
     "vite": "^4.3.4",
     "vite-plugin-pwa": "^0.14.7"
   },
@@ -16,5 +18,9 @@
   "volta": {
     "node": "20.1.0",
     "npm": "9.6.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
   }
 }

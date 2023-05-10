@@ -1,7 +1,7 @@
 html {
   height: 100%;
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 body {
   margin: 0;
@@ -43,7 +43,7 @@ video.dropping {
   app-region: drag;
 }
 
-input[type=file] {
+input[type='file'] {
   opacity: 0;
   position: absolute;
   top: 0;
