@@ -17,7 +17,7 @@
   "license": "MIT",
   "volta": {
     "node": "20.4.0",
-    "npm": "9.8.0"
+    "npm": "9.9.2"
   },
   "prettier": {
     "singleQuote": true,
