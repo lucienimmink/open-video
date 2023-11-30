@@ -16,7 +16,7 @@
   "author": "Lucien Immink",
   "license": "MIT",
   "volta": {
-    "node": "20.4.0",
+    "node": "20.10.0",
     "npm": "9.9.2"
   },
   "prettier": {
